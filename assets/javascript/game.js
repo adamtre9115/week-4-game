@@ -29,7 +29,7 @@ $(document).ready(function () {
         emerald = getRandInt(12, 1);
         sapphire = getRandInt(12, 1);
         $("#turns").html(turnCount);
-        
+
         $("#diamond").on("click", function () {
             userScore += diamond;
             turnCount--;
@@ -56,7 +56,7 @@ $(document).ready(function () {
         })
     }
 
-    
+
     function winLose() {
         $("img").on("click", function () {
             if (turnCount === 0 && userScore < numMatch || userScore > numMatch) {
@@ -66,12 +66,12 @@ $(document).ready(function () {
                 console.log("I'm here");
                 reset();
                 // if user score is over or less than number to guess user loses
-            // } else if (turnCount === 0 && userScore > numMatch) {
-            //     alert("Sorry, you lose.");
-            //     loss++;
-            //     $("#losses").html(loss);
-            //     console.log("I'm here 2");
-            //     reset();
+                // } else if (turnCount === 0 && userScore > numMatch) {
+                //     alert("Sorry, you lose.");
+                //     loss++;
+                //     $("#losses").html(loss);
+                //     console.log("I'm here 2");
+                //     reset();
                 // if user score matches number to guess generate win
             } else if (userScore === numMatch) {
                 alert("You win!");
@@ -82,19 +82,19 @@ $(document).ready(function () {
             }
         })
     }
-    
-    function playGame(){
+
+    function playGame() {
         updateNums();
         winLose();
     }
 
     // reset game/new game function
-    function reset(){
+    function reset() {
         turnCount = 15;
         $("#turns").html(turnCount);
         userScore = 0;
         $("#userScore").html(userScore);
-        }
+    }
 
     playGame();
 
