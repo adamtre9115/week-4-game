@@ -1,11 +1,26 @@
+/********************
+    base styles
+    
+********************/
+.container {
+    width: 95%;
+}
+
 body {
-    background-color: #1fda9a;
+    /* background-color: #1fda9a; */
+    background: url(../images/map.jpg);
+}
+
+h1 {
+    font-size: 50px;
+    color: #f8eda8;
+    text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
 }
 
 .instruct {
     margin: 0 auto;
-    background-color: #28abe3;
-    border: 2px solid #e8b71a;
+    background-color: #c08d4a;
+    border: 2px solid #860513;
     border-radius: 15px;
 }
 
@@ -16,8 +31,8 @@ body {
 .matchSect,
 .winSect {
     margin: 0 auto;
-    background-color: #28abe3;
-    border: 2px solid #e8b71a;
+    background-color: #c08d4a;
+    border: 2px solid #860513;
     border-radius: 15px;
 }
 
@@ -25,13 +40,35 @@ body {
     margin-top: 15px;
 }
 
+.scoreSect {
+    background-color: #c08d4a;
+    border: 2px solid #860513;
+    border-radius: 15px;
+}
+
 .imgInner,
 .scoreSect {
     margin: 0 auto;
 }
 
+/********************
+    media queries
 
-@media screen (min-width: 960px) {
+********************/
+@media (max-width: 540px) {
+    .col-md-3.scoreSect {
+        width: 45%;
+        margin-top: 15px;
+    }
+
+    .matchSect,
+    .winSect {
+        max-width: 49.5%;
+    }
+    
+}
+
+@media (min-width: 960px) {
     .winSect {
         margin-left: 150px;
     }
