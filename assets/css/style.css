@@ -1,0 +1,38 @@
+body {
+    background-color: #1fda9a;
+}
+
+.instruct {
+    margin: 0 auto;
+    background-color: #28abe3;
+    border: 2px solid #e8b71a;
+    border-radius: 15px;
+}
+
+.gameSect {
+    margin-top: 15px;
+}
+
+.matchSect,
+.winSect {
+    margin: 0 auto;
+    background-color: #28abe3;
+    border: 2px solid #e8b71a;
+    border-radius: 15px;
+}
+
+.imgSect {
+    margin-top: 15px;
+}
+
+.imgInner,
+.scoreSect {
+    margin: 0 auto;
+}
+
+
+@media screen (min-width: 960px) {
+    .winSect {
+        margin-left: 150px;
+    }
+}
