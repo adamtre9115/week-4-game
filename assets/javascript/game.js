@@ -1,15 +1,15 @@
-var numMatch; //number for user to match
+var numMatch;       //number for user to match
 var wins = 0;
 var loss = 0;
 var turnCount = 15;
-var diamond; //diamond image
-var ruby; //ruby image
-var emerald; //emerald image
-var sapphire; //sapphire image
+var diamond;        //diamond random number
+var ruby;           //ruby random number
+var emerald;        //emerald random number
+var sapphire;       //sapphire random number
 var userScore = 0;
 
 
-$(document).ready(function () {
+$(document).ready(function() {
 
     // generate random number between 19 and 120 for mumber to guess
     // generate random number between 1 and 12 for each image 
@@ -30,25 +30,25 @@ $(document).ready(function () {
     }
 
     function imgClick() {
-        $("#diamond").on("click", function () {
+        $("#diamond").on("click", function() {
             userScore += diamond;
             turnCount--;
             $("#userScore").html(userScore);
             $("#turns").html(turnCount);
         })
-        $("#ruby").on("click", function () {
+        $("#ruby").on("click", function() {
             userScore += ruby;
             turnCount--;
             $("#userScore").html(userScore);
             $("#turns").html(turnCount);
         })
-        $("#emerald").on("click", function () {
+        $("#emerald").on("click", function() {
             userScore += emerald;
             turnCount--;
             $("#userScore").html(userScore);
             $("#turns").html(turnCount);
         })
-        $("#sapphire").on("click", function () {
+        $("#sapphire").on("click", function() {
             userScore += sapphire;
             turnCount--;
             $("#userScore").html(userScore);
@@ -57,7 +57,7 @@ $(document).ready(function () {
     }
 
     function winLose() {
-        $("img").on("click", function () {
+        $("img").on("click", function() {
             if (turnCount === 0 && userScore < numMatch || userScore > numMatch) {
                 alert("Sorry, you lose.");
                 loss++;
